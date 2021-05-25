@@ -36,7 +36,9 @@ jogador(E):- read(X),
 			 read(A),
 			 read(B),
 			 op1(E, a(move(X, Y), Final)),
-			 asserta(bloqueado((A, B))),
+			 member(((A, B), BB1), Bloqueados),
+			 BB1 \= 1,
+			 BB1 is 1, 
 			 write(Final),
 			 agente_amazon(Final).
 
