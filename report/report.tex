@@ -49,7 +49,9 @@ c) \verb|valor(E, -1, P):- terminal(E), R is P mod 2, R = 1.|
 \hspace{0,45cm}\verb|valor(E, 1, P):- terminal(E), R is P mod 2, R=0.|
 
 d) Dado o estado inicial \verb|e(1, 2, 2, 5)| vamos remover \textbf{na linha 4, 4 paus}
-(\verb|ret(4,4)|), obtendo um estado \verb|e(1, 2, 2, 1)|.
+(\verb|ret(4,4)|), obtendo um estado \verb|e(1, 2, 2, 1)|. Para obter este resultado no código
+do \textbf{mini-max} temos que \textbf{tirar o comentário} do predicado \verb|g(Jogo)| entre a
+linha \textbf{3-9} e \textbf{comentar} o predicado \verb|g(Jogo)| entre a linha \textbf{14-16}.
 
 e) A pesquisa alfa-beta, também conhecida como \textbf{Poda da Árvore} (Pruning) é uma técnica
 de compressão de dados que reduz o tamanho da \textbf{árvore do min-max} através da remoção de
@@ -58,8 +60,11 @@ temporal e espacial}.
 
 f)
 
-g) Dado o estado inicial \verb|e(1, 2, 2, 5)| o jogo seria o seguinte:
-\newline
+g) Para obter este resultado no código do \textbf{mini-max} temos que \textbf{tirar o comentário}
+do predicado \verb|g(Jogo)| entre a linha \textbf{14-16} e \textbf{comentar} o predicado
+\verb|g(Jogo)| entre a linha \textbf{3-9}.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(1, 2, 2, 5)| o jogo seria o seguinte:
 \begin{lstlisting}
     ret(4,4)
     e(1,2,2,1)
@@ -113,6 +118,33 @@ b) \verb|terminal(E):- +op1(E, , ).|
 c) \verb|valor(E, -1, P):- terminal(E), R is P mod 2, R = 1.|
 
 \hspace{0,45cm}\verb|valor(E, 1, P):- terminal(E), R is P mod 2, R=0.|
+
+d) Para obter este resultado no código do \textbf{mini-max} temos que \textbf{tirar o comentário}
+do predicado \verb|g(Jogo)| entre a linha \textbf{14-16} e \textbf{comentar} o predicado
+\verb|g(Jogo)| entre a linha \textbf{3-9}. No predicado que \textbf{não se encontra comentado}
+deverá ser alterado o \textbf{nome do agente} para \verb|agente_amazona|.
+
+e) Usando \textbf{mini-max} sem nenhuma \textbf{posição bloqueada} exceto pelos jogadores (p1,p2):
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(0, 0), p2(2, 2), p1)| iria expandir 29 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(0, 1), p2(2, 2), p1)| iria expandir 33 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(0, 2), p2(2, 2), p1)| iria expandir 28 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(1, 0), p2(2, 2), p1)| iria expandir 33 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(1, 1), p2(2, 2), p1)| iria expandir 37 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(1, 2), p2(2, 2), p1)| iria expandir 29 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(2, 0), p2(2, 2), p1)| iria expandir 28 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(2, 1), p2(2, 2), p1)| iria expandir 29 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(0, 0), p2(2, 1), p1)| iria expandir 34 nós.
+
+\hspace{0,45cm}Dado o estado inicial \verb|e(p1(0, 0), p2(2, 0), p1)| iria expandir 28 nós.
 
 
 % -------------------------------------------------------------------------------------------
